@@ -1,5 +1,4 @@
-#include <Polar.h>
-
+#include "pch.h"
 //Skeleton class run by Polar::Application
 
 class Application : public Polar::Application

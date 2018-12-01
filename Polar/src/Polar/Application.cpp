@@ -1,3 +1,4 @@
+#include "../PolarPCH.h"
 #include "Application.h"
 
 namespace Polar
@@ -13,10 +14,7 @@ namespace Polar
 
 	void Application::Run()
 	{
-		while (true)
-		{
-
-		}
+		system("PAUSE");
 	}
 
 

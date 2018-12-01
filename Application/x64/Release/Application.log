@@ -1,0 +1,11 @@
+﻿  pch.cpp
+c:\dev\polar\polar\src\polar\log.h(18): warning C4251: 'Polar::Log::s_PolarCoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Polar::Log'
+  c:\dev\polar\polar\vendor\spdlog\include\spdlog\logger.h(164): note: see declaration of 'std::shared_ptr<spdlog::logger>'
+c:\dev\polar\polar\src\polar\log.h(19): warning C4251: 'Polar::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Polar::Log'
+  c:\dev\polar\polar\vendor\spdlog\include\spdlog\logger.h(164): note: see declaration of 'std::shared_ptr<spdlog::logger>'
+  Application.cpp
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __cdecl Polar::Application::Application(void)" (__imp_??0Application@Polar@@QEAA@XZ)
+pch.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static void __cdecl Polar::Log::Init(void)" (__imp_?Init@Log@Polar@@SAXXZ)
+pch.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __cdecl Polar::Application::Run(void)" (__imp_?Run@Application@Polar@@QEAAXXZ)
+pch.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __cdecl Polar::Application::~Application(void)" (__imp_??1Application@Polar@@QEAA@XZ)
+C:\dev\Polar\x64\Release\Application.exe : fatal error LNK1120: 4 unresolved externals

@@ -1,0 +1,2 @@
+﻿     Creating library C:\dev\Polar\x64\Release\Polar.lib and object C:\dev\Polar\x64\Release\Polar.exp
+LINK : fatal error LNK1561: entry point must be defined
