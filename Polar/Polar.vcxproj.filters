@@ -36,6 +36,18 @@
     <ClInclude Include="src\Polar\MemLeakDetector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Polar\Events\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Polar\Events\KeyEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Polar\Events\MouseEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Polar\Events\ApplicationEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Polar\Application.cpp">

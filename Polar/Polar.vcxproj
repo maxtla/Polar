@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Polar\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Polar\Events\KeyEvent.h" />
+    <ClInclude Include="src\Polar\Events\Event.h" />
     <ClInclude Include="src\PolarPCH.h" />
+    <ClInclude Include="src\Polar\Events\MouseEvent.h" />
     <ClInclude Include="src\Polar\Log.h" />
     <ClInclude Include="src\Polar.h" />
     <ClInclude Include="src\Polar\Application.h" />
@@ -76,13 +80,13 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>PL_PLATFORM_WINDOWS;PL_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)Polar\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Polar\vendor\spdlog\include;$(ProjectDir)src;</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PolarPCH.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>PolarPCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <PostBuildEvent>
-      <Command> copy /B /Y "$(TargetDir)*.dll" "$(TargetDir)/../Application"</Command>
+      <Command>copy /Y "$(TargetDir)$(TargetName).dll" "$(TargetDir)\..\Application"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -94,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>PL_PLATFORM_WINDOWS;PL_BUILD_DLL;_WINDLL;_MBSC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)Polar\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Polar\vendor\spdlog\include;$(ProjectDir)src;</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>PolarPCH.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PolarPCH.h</PrecompiledHeaderFile>
@@ -104,7 +108,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command> copy /B /Y "$(TargetDir)*.dll" "$(TargetDir)/../Application"</Command>
+      <Command>copy /Y "$(TargetDir)$(TargetName).dll" "$(TargetDir)\..\Application"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
